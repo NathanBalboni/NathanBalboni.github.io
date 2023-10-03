@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+		<style type="text/css">
+		#ski{ 
+			width:100px;
+			height:100px;
+			background-color: blue;
+			background-size:contain;
+			background-repeat: no repeat;
+			animation-name:ball;
+			animation-duration:5s;
+			animation-iteration-count: infinite;
+			positon:absolute;
+			background-image: url("https://i.etsystatic.com/22502522/r/il/828a5a/2379324739/il_fullxfull.2379324739_k08e.jpg");
+			
+		}
+
+@keyframes ball{
+
+	0%{
+		width:100px;
+		height:100px;
+		left:0px;
+		background-color:blue;
+	}
+	50%{
+		width:300px;
+		height:300px;
+		left:500px;
+		background-color:green;
+	}
+	100%{
+		width:100px;
+		height:100px;
+		left:0px;
+		background-color:black;
+	}
+}
+
+	</style>
+</head>
+<body>
+
+
+
+
+<div id="ski"></div>
+
+</body>
+</html>
