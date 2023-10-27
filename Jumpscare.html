@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+
+
+
+		#candy{
+			width:200px;
+			height:200px;
+			background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThl6vnuZNpC7--hAu4lL8ehG4UJp3QE2PEfw&usqp=CAU");
+			background-size:contain;
+			background-repeat:no-repeat;
+			opacity:1;
+			z-index: 10;
+		}
+
+		#clown{
+			z-index: -10;
+			position:absolute;
+			top:0px;
+			width:1500px;
+			height:1500px;
+			background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYvaV5XkW_yMJzjeozW3qAIRNiXeMigJSHQw&usqp=CAU");
+			background-size:contain;
+			background-repeat:no-repeat;
+			opacity:0;
+
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	
+<div id="click">
+<center><h1>click to take a piece of candy</h1></div></center>
+
+
+
+<audio id="sound" src="horror.mp3"></audio>
+
+	<center><div id="candy"></div>
+
+	<div id="clown"></div>
+
+	<!-- <button id="Play">play</button> -->
+
+<script type="text/javascript">
+
+
+	candy.addEventListener("click", function(){
+		clown.style.opacity = "1"
+		sound.play();
+
+		candy.style.opacity = "0"
+
+		click.style.opacity="0"
+
+	})
+
+		
+
+	 	</script>
+
+ 
+	
+
+</body>
+</html>
