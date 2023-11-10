@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function makeSkis (){
+			var snow = document.createElement("div")
+			document.body.appendChild(snow);
+			snow.style.backgroundImage="url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/14786/skiing-equipment-sports-clipart-xl.png)";
+			snow.style.backgroundSize = "contain"
+			snow.style.backgroundRepeat = "no-repeat"
+			snow.style.width = "200px";
+			snow.style.height = "200px";
+			snow.style.borderRadius = "50%";
+			snow.style.display = "inline-block";
+
+			snow.addEventListener("mouseenter", function(){
+				snow.style.opacity=0
+
+
+
+		})
+	}
+
+		setInterval(makeSkis, 100)
+
+</script>
+</body>
+</html>
