@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+
+		.Mbappe{
+			width:100px;
+			height:100px;
+			background-size:contain;
+			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRvBynxz4qfrPmpXcqs0lnQ_NIzXgrRL5BQ&usqp=CAU);
+			display:inline-block;
+			color-white;
+		}
+ 	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	function makeSoccer (input){
+	var Soccer = document.createElement("div");
+	Soccer.classList.add("Mbappe")
+	document.body.appendChild(Soccer)
+	Soccer.innerText=input
+
+}
+for (var counter = 1; counter<101; counter=counter+1){
+makeSoccer(counter)
+}
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	 <style type="text/css">
+    #burrito {
+        position:relative;
+        width: 600px;
+        height: 600px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-xkcZCLcal3GLePUa_XmWyJNqPrXk_vyoYQ&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #rice {
+
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57Zp4yxiep_hZ7S7NcyDXVDmvBPECMIMG7Q&usqp=CAU);
+        background-size: cover;
+    }
+
+    #chicken {
+
+        background-image: url(https://www.chipotle.com/content/dam/chipotle/menu/menu-items/cmg-6601-chicken/web-mobile/order.png);
+    }
+
+    #peppers {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAduxI_sKfgPKP4N9-OjtD5qjfqgJcX5woVw&usqp=CAU);
+    }
+
+    #cheese {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxxWeln8rNU1cfq242thxog9R40IMArZNGw&usqp=CAU);
+    }
+
+    #bb{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGK78JTVQdbSfJafp-c2Xd112xzbWVzVL22g&usqp=CAU);
+    }
+
+    #onion {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGc9mzTFEg8AwpQqk5nuIn1vkyB4v-TiDbQ&usqp=CAU);
+    }
+
+    #tomatoes {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjSkxfClBvblcJ0JgxZxsE9R7wsmnHPrMLg&usqp=CAU);
+    }
+
+    .topping {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        display: inline-block;
+        position: relative;
+/*        background-color:blue;*/
+
+
+    }
+
+
+</style>
+</head>
+
+
+<body>
+
+	<div class="topping" id="rice"></div>
+    <div class="topping" id="chicken"></div>
+    <div class="topping" id="peppers"></div>
+    <div class="topping" id="cheese"></div>
+    <div class="topping" id="bb"></div>
+    <div class="topping" id="onion"></div>
+    <div class="topping" id="tomatoes"></div>
+    <div id="burrito"></div>
+    <script type="text/javascript">
+    var image;
+
+    rice.addEventListener("click", function(){
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57Zp4yxiep_hZ7S7NcyDXVDmvBPECMIMG7Q&usqp=CAU)"
+
+        console.log(image)
+
+    })
+     chicken.addEventListener("click", function(){
+        image = "url(https://www.chipotle.com/content/dam/chipotle/menu/menu-items/cmg-6601-chicken/web-mobile/order.png)"
+
+        console.log(image)
+
+    })
+      peppers.addEventListener("click", function(){
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAduxI_sKfgPKP4N9-OjtD5qjfqgJcX5woVw&usqp=CAU)"
+
+        console.log(image)
+
+    })
+       cheese.addEventListener("click", function(){
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxxWeln8rNU1cfq242thxog9R40IMArZNGw&usqp=CAU)"
+
+        console.log(image)
+
+    })
+        bb.addEventListener("click", function(){
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGK78JTVQdbSfJafp-c2Xd112xzbWVzVL22g&usqp=CAU)"
+
+        console.log(image)
+
+    })
+         onion.addEventListener("click", function(){
+
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGc9mzTFEg8AwpQqk5nuIn1vkyB4v-TiDbQ&usqp=CAU)"
+
+        console.log(image)
+
+    })
+          tomatoes.addEventListener("click", function(){
+
+        image = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjSkxfClBvblcJ0JgxZxsE9R7wsmnHPrMLg&usqp=CAU)"
+
+        console.log(image)
+
+    })
+
+        burrito.addEventListener("click", function makeTopping (event){
+    var topping = document.createElement("div");
+    topping.classList.add("topping")
+    topping.style.position="absolute";
+    topping.style.left = event.clientX +"px"
+    topping.style.top = event.clientY +"px"
+    topping.style.backgroundImage = image
+
+    document.body.appendChild(topping)
+   
+
+
+})
+
+</script>
+</body>
+</html>

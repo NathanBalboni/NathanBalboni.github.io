@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+	
+	div{
+		font-size:40px;
+	}
+	
+</style>
+</head>
+<body>
+
+	<div id="names">What is the best ski brand?</div>
+<script type="text/javascript">
+	
+	var random = Math.round(Math.random()*3)
+
+	console.log(random)
+
+
+	var skis = ["Fisher", "Atomic", "Rossignol", "Stockli", "k2"];
+
+	console.log(skis[random])
+
+	document.addEventListener("click", function(){
+	var random = Math.round(Math.random()*4)
+	names.innerText= skis[random]
+	})
+</script>
+</body>
+</html>
