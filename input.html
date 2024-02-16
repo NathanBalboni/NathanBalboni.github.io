@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+
+
+</head>
+<body>
+
+	<input id="input">
+		
+
+
+	</input>
+
+<button id="submission">
+	submit
+</button>
+<div id="answer"></div>
+<script type="text/javascript">
+	submission.addEventListener("click", function(){
+	console.log(input.value)
+	answer.innerText = input.value
+	if (input.value == "Jonnah"){answer.innerText = "Happy Presidents Day"}
+	else if (input.value == "seb" ||"Seb"){answer.innerText = "Hello"}
+	else{answer.innerText = "Your answer is "+ Math.round(Math.random()*100)+"correct"}
+})
+</script>
+
+</body>
+</html>

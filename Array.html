@@ -7,7 +7,13 @@
 	<style type="text/css">
 	
 	div{
-		font-size:40px;
+		Border:1px solid black;
+		width:500px;
+		height:200px;
+		backgrounf-position:left;
+		background-size:contain;
+		display:inline-block;
+		font-size:70px;
 	}
 	
 </style>
@@ -15,21 +21,38 @@
 <body>
 
 	<div id="names">What is the best ski brand?</div>
+	<div id="pic"></div>
 <script type="text/javascript">
 	
-	var random = Math.round(Math.random()*3)
-
-	console.log(random)
-
+	var random = Math.round(Math.random()*4)
 
 	var skis = ["Fisher", "Atomic", "Rossignol", "Stockli", "k2"];
+
+	var pics = ["url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC2szeJKv_TMfktGtdBZSfTk-hPiaz7oKMfA&usqp=CAU)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOlB-UVx6doYt2JFMM3pxamM7WwMx0BqAi6Q&usqp=CAU)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKMYkkXFUsq14VH1PF0nWu0G2vxusURgioRg&usqp=CAU)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8R3JJQ2EPR3cHqAmrxhNy4AXiN3hKN5ljeQ&usqp=CAU)","url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf608gVQbwsudZoGkxUityXQCj2RW938qcew&usqp=CAU)"]
+
+
+	console.log(pics[random])
+
+
 
 	console.log(skis[random])
 
 	document.addEventListener("click", function(){
+		
 	var random = Math.round(Math.random()*4)
+	
+
 	names.innerText= skis[random]
+
+
+	//pic.innerText= pics[random]
+
+	pic.style.backgroundImage = pics[random]
 	})
+
+
 </script>
+
+    
 </body>
 </html>
