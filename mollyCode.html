@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animation</title>
+
+    <style type="text/css">
+
+        
+        #player {
+            width: 70px;
+            height: 150px;
+            background-color: blue;
+            position: relative;
+            top: 50px;
+            left: 80%;
+             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTmSfQVim5Zm5TrN1n3EifcrYRgbT8u7cMEw&usqp=CAU");
+            transform: translateX(-50%);
+        }
+
+        #ball {
+            width: 15px;
+            height: 15px;
+            background-color: hotpink;
+            position: absolute;
+            top: 200px;
+            left: 80%;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgsAIw2EYocruO4-VYB7SBEmkORyBSF41ow&usqp=CAU");
+/*            transform: translateX(-50%);*/
+            transition:2s;
+        }
+
+        #leg {
+            width: 30px;
+            height: 75px;
+            background-color: yellowgreen;
+            position: absolute;
+            bottom: 0;
+            left: 80%;
+            transform-origin: top left;
+            background-image: url("https://s.hs-data.com/picmon/38/41Sj_793WYe_l.jpg");
+            transform: rotate(-80deg);
+            }
+            
+        #goal {
+       		Width: 10px;
+        	height: 100px;
+        	background-color: green;
+        	position: absolute;
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFDxCBwlyNLknzSzc3y4rpxzTeZJ2ta__sQ&usqp=CAU");
+        }
+    </style>
+    <style>
+p {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFDxCBwlyNLknzSzc3y4rpxzTeZJ2ta__sQ&usqp=CAU);
+}
+</style>
+</head>
+<body>
+
+    <div id="player">
+        <div id="leg"></div>
+    </div>
+    <div id="ball"></div>
+
+<script type="text/javascript">
+    var random;
+    var leg = document.getElementById("leg");
+    var distnace;
+    var ballLeft = parseInt(getComputedStyle(ball).left);
+
+    // console.log(ballLeft)
+
+    leg.addEventListener("click", function() {
+        random = Math.random() * -80; // Random angle between -90 and 0 degrees
+
+        leg.style.transform = "rotate(" + (-80 - random) + "deg)";
+
+        console.log("random is " + random)
+        console.log("-80 minus random is " + (-80-random)) 
+
+        function ballDistance (){
+            distance = (-80 + random)*5;
+            console.log(distance)
+            ball.style.left = ballLeft + distance +'px'
+            console.log(ball.style.left)
+
+        }
+
+        ballDistance();
+    });
+
+</script>
+
+</body>
+</html>

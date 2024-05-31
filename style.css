@@ -1,0 +1,27 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: snas-serif;
+
+}
+body{
+	background-color: #1c2331;
+}
+.container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+
+}
+.card{
+	width:325px;
+	background-color:#283144;
+	color:#fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	margin:10px;
+	
+}

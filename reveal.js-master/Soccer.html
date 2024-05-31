@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Soccer shooting game</title>
+	<style>
+		
+	canvas{
+			border:1px solid black;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<canvas id="gameCanvas" width="800" height="600"></canvas>
+	<script>
+		//context 
+		var canvas = document.getElementById("gameCanvas");
+    	var ctx = canvas.getContext("2d");
+
+    // Player variables
+    	var playerWidth = 30;
+    	var playerHeight = 50;
+    	var player1 = canvas.width / 2 - playerWidth / 2;
+    	var player2 = canvas.height - playerHeight - 10;
+    	var playerSpeed = 5;
+
+    // Ball variables
+    	var ballRadius = 8;
+    	var ball1 = canvas.width / 2;
+    	var ball2 = 50;
+    	var ballSpeed = 5;
+    	var ball3 = 0;
+   	 	var ball4 = 0;
+
+   	 	//player movement 
+
+   	 	document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+            player1 -= playerSpeed;
+        } else if (event.key === "ArrowRight") {
+            player1 += playerSpeed;
+        }
+    });
+
+
+	</script>
+
+</body>
+</html>

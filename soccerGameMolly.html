@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animation</title>
+
+  <style>
+      
+        #Field {
+            position: relative;
+            width: 700px;
+            height: 400px;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOSV6CRLt4Cgx47HQ0OTN7gfuclt8y1UXHBQ&usqp=CAU') no-repeat center/contain;;
+            
+        }
+        #Mbappe {
+            position: absolute;
+            bottom: 20px;
+            left: 100px;
+            width: 120px;
+            height: 400px;
+            background: url('mbappes.png') no-repeat center/contain;
+             transform: translateX(-10%);
+
+        }
+        #ball {
+            position: absolute;
+            bottom: 160px;
+            left: 180px;
+            width: 50px;
+            border-radius: 29px;
+            height: 50px;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTRlinZKwWLjg1hgBs1k5PUOx_p6YNWrccQ&usqp=CAU') no-repeat center/contain;
+         
+        }
+        #goal {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 300px;
+            
+            background: url('') no-repeat center/contain;
+        }
+          #leg {
+            width: 30px;
+            height: 75px;
+            background-color: yellowgreen;
+            position: absolute;
+            bottom: 0;
+            left: 80%;
+            transform-origin: top left;
+            background-image: url("https://s.hs-data.com/picmon/38/41Sj_793WYe_l.jpg");
+            transform: rotate(-80deg);
+            }
+    </style>
+</head>
+<body>
+    <div id="Field">
+        <div id="Mbappe"></div>
+        <div id="ball"></div>
+        <div id="goal"></div>
+    </div>
+    <script>
+    	var random;
+        const Field = document.getElementById('Field');
+        const ball = document.getElementById('ball');
+        const goal = document.getElementById('goal');
+        const randomtime = Math.floor(Math.random()+2) + 1; 
+
+        ///calculates the position where the user clicked witin the field area and determines the new position for the soccer ball
+
+        Field.addEventListener('click', (event) => { ///when the user cicks inside the goal, the position of the click is calculated
+            const rect = Field.getBoundingClientRect();
+            const x = event.clientX - rect.left - ball.clientWidth / 2;
+            const y = event.clientY - rect.top - ball.clientHeight / 2;
+
+            ///if the clicks is inside the goal area, the ball moves smoothly to the clicked position 
+
+            const goalRect = goal.getBoundingClientRect();
+            if (
+
+            ///This lines gets the position and dimensions of the goal relative to the viewport
+                x >= goalRect.left - rect.left &&
+                x <= goalRect.right - rect.left - ball.clientWidth &&
+                y >= goalRect.top - rect.top &&
+                y <= goalRect.bottom - rect.top - ball.clientHeight
+
+                /// finding the coordinates of the click and checks whether or not it is in the boundry of the goal
+            ) {
+
+            
+     			const randomTime = (Math.random() * 3) + .25; // Random time between .25 and 4 seconds
+                ball.style.transition = `left ${randomTime}s, top ${randomTime}s`;
+
+         		
+                ball.style.left = `${x}px`;
+                ball.style.top = `${y}px`;
+                ///handles the movement of the soccer ball to the clicked location within the goal area
+            } else {
+                alert("Aim for the goal");
+                ///If the click is outside the goal area an alert prompts the user to aim for the goal
+            }
+        });
+
+    </script>
+    <script type="text/javascript">
+   
+    var leg = document.getElementById("leg");
+    var distnace;
+    var ballLeft = parseInt(getComputedStyle(ball).left);
+
+    console.log(ballLeft)
+
+    leg.addEventListener("click", function() {
+        random = Math.random() * 80; // Random angle between -90 and 90 degrees
+        leg.style.transform = "rotate(" + random + "deg)";
+        console.log(random)
+
+        function ballDistance (){
+            distance = random*5;
+            ball.style.left = ballLeft + distance +'px'
+            console.log(ball.style.left)
+
+        }
+
+        ballDistance();
+    });
+
+</script>
+</body>
+</html>
